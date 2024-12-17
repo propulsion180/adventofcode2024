@@ -170,9 +170,8 @@ func (w *Warehouse) canPushBoxes(boxes [][2]int, dir rune) bool {
 			return false
 		}
 		if w.grid[nr][nc] == 'O' {
-			// Check if this 'O' is part of the same chain
+
 			if !boxSet[[2]int{nr, nc}] {
-				// If it's an O not in the chain, can't push
 				return false
 			}
 		}
